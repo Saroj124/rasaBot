@@ -88,6 +88,7 @@ nlu:
   examples: |
     - travelUK
     - TravelUK
+    - Travelling to UK during COVID-19
 - intent: TravelEU
   examples: |
     - TravelEU
@@ -111,4 +112,26 @@ nlu:
     - my name is [Alex](name)
     - My first name is [Alexander](name)
     - I am [Harry](name)
-    - Harry
+    - [Harry](name)
+    - my name is [George](name)
+    - [alex](name)
+    - [yubraj](name)
+    - [peter](name)
+- intent: uklocalrules
+  examples: |
+    - Local Rules and Regulation
+- intent: ukRulesandregulations
+  examples: |
+    - What are the rules and regulations in the UK?
+- intent: transport and transfers
+  examples: |
+    - transport and transfers
+- intent: accomodation
+  examples: |
+    - accomodation
+- intent: attractions
+  examples: |
+    - attractions
+- intent: general queries
+  examples: |
+    - general queries

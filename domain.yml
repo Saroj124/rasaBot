@@ -54,10 +54,10 @@ responses:
   - text: I am a bot, powered by Rasa.
   utter_giveuserName:
   - buttons:
-    - payload: TravelUK
+    - payload: Travelling to UK during COVID-19
       title: Travelling to UK during COVID-19
-    - payload: TravelEU
-      title: Travelling to UK during COVID-19
+    - payload: Travelling to EU  during COVID-19
+      title: Travelling to EU  during COVID-19
     text: 'Hello there {name}.  I am  here to assist you with your visit to the UK and EU during Covid 19 and know you better.  I can help you with:'
   utter_travelUK:
   - buttons:
@@ -83,6 +83,45 @@ responses:
     - payload: Travel Measures
       title: Travel Measures
     text: 'Hi {name}. If you wish to travel to the EU zone during covid 19, there are number of rules and regulations.  Would you like to know more about:'
+  utter_ukrulesandRegulations:
+  - text: |-
+      These are some of the local rules and regulations that you need to conisder wile travelling to the UK: 
+       1.Local and national lockdowns are being
+      implemented across the UK at different times. For more information on specific areas, visitors should check the relevant government pages and the interactive map of lockdown restrictions before they travel.
+  utter_transfersandTransport:
+  - image: https://covid19.nhs.uk/assets/share-image.jpg
+    text: Transfers are subject to change and visitors should ensure they check with the operator prior to travel.  It is suggested that you download the NHS COVID-19 app before you travel, if possible, and check in where you see official NHS COVID-19 QR code posters
+  utter_accomodation:
+  - text: The rules regarding which types of accommodation are open vary for each nation and are subject to change. Government guidance will apply to all accommodation providers and varies by nation – please see the links below for further details. https://www.gov.uk/guidance/working-safely-during-covid-19/hotels-and-guest-accommodation
+  utter_attraction:
+  - text: Visitors should ensure they check with the attraction before planning travel, and bear in mind that many are operating a timed ticketing system.
+  utter_generalqueries:
+  - buttons:
+    - payload: Face Mask
+      title: Face Mask
+    - payload: Roaming
+      title: 'Roaming '
+    - payload: public toilets
+      title: public toilets
+    - payload: Payment method
+      title: Payment method
+    - payload: travel method
+      title: travel method
+    text: ''
+  utter_facemask:
+  - image: https://assets.publishing.service.gov.uk/government/uploads/system/uploads/image_data/file/99962/s960_Face-Covering.jpg
+    text: Other locations where face coverings are mandatory differ by nation, and visitors should follow the specific guidance for face coverings for England, Scotland, Wales or Northern Ireland, depending on the country they are visiting. please visit https://www.gov.uk/government/publications/face-coverings-when-to-wear-one-and-how-to-make-your-own/face-coverings-when-to-wear-one-and-how-to-make-your-own for more information
+  utter_roaming:
+  - text: |-
+      Visitors who are from countries not affected by UK Quarantine regulations are permitted to move around freely, but should check the guidance for each of the devolved nations (England, Scotland, Wales, Northern Ireland).
+
+      Visitors to the UK from countries affected by the UK Quarantine regulations must not leave the place they are staying for the first 14 days in the UK. After this time they can move freely outside in public, but observe social distancing.
+  utter_payment:
+  - text: Both cash and card is accepted form of payment in the UK.
+  utter_publictoilet:
+  - text: Some public toilets have been closed while some lockdown restrictions remain, so visitors should check what facilities are open before planning to travel somewhere for the day. Information on public toilets in Great Britain and Northern Ireland can be found at Lockdown Loo.
+  utter_travelmethod:
+  - text: There are many ways you can travel around Uk. You can choose to travel by Bus, Ferry, Train, Taxi, airplane or even drive if you have a valid UK driving Liscense
 actions: []
 forms: {}
 e2e_actions: []

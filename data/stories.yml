@@ -58,3 +58,42 @@ stories:
     - name: saroj
   - action: utter_giveuserName
   - intent: travelUK
+- story: Story from Conversation ID 096d50a5602a4d9ea723157969828e48
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: userName
+    entities:
+    - name: George
+  - slot_was_set:
+    - name: George
+  - action: utter_giveuserName
+  - intent: travelUK
+  - action: utter_travelUK
+- story: Story from Conversation ID 4a01e63c848e47dd9dde35f0fcb00e3c
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: userName
+    entities:
+    - name: alex
+  - slot_was_set:
+    - name: alex
+  - action: utter_giveuserName
+  - intent: travelUK
+  - action: utter_travelUK
+  - intent: uklocalrules
+- story: Story from Conversation ID 94f917e2348847fc80d161162f440313
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: userName
+    entities:
+    - name: peter
+  - slot_was_set:
+    - name: peter
+  - action: utter_giveuserName
+  - intent: travelUK
+  - action: utter_travelUK
+  - intent: uklocalrules
+  - action: utter_ukrulesandRegulations
