@@ -5,6 +5,8 @@ session_config:
   session_expiration_time: 60
   carry_over_slots_to_new_session: true
 intents:
+- userbudget:
+    use_entities: true
 - greet:
     use_entities: true
 - goodbye:
@@ -48,6 +50,7 @@ intents:
 entities:
 - name
 - occupation
+- age
 slots:
   occupation:
     type: rasa.shared.core.slots.TextSlot
@@ -110,10 +113,7 @@ responses:
       title: Travel Measures
     text: 'Hi {name}. If you wish to travel to the EU zone during covid 19, there are number of rules and regulations.  Would you like to know more about:'
   utter_ukrulesandRegulations:
-  - text: |-
-      These are some of the local rules and regulations that you need to conisder wile travelling to the UK: 
-       1.Local and national lockdowns are being
-      implemented across the UK at different times. For more information on specific areas, visitors should check the relevant government pages and the interactive map of lockdown restrictions before they travel.
+  - text: These are some of the local rules and regulations that you need to conisderwile travelling to the UK  Local and national lockdowns are being implemented in the UK at different times. Visitors to the UK must provide their journey and contact details and need to self isolate for 14 days depending upon where they have been in the past 14 days. All UK travellers are to fill up a form containing their contact details, travel details and passport details. Social distanacing should be followed at the airport and face mask is recommended whilst using a public transportation
   utter_transfersandTransport:
   - image: https://covid19.nhs.uk/assets/share-image.jpg
     text: Transfers are subject to change and visitors should ensure they check with the operator prior to travel.  It is suggested that you download the NHS COVID-19 app before you travel, if possible, and check in where you see official NHS COVID-19 QR code posters
@@ -175,9 +175,9 @@ responses:
       title: £4000+
     text: Whilst you are in the Uk, how much amount of money do you wish to spend ? (in £)
   utter_askfordetails:
-  - text: '{name}, Before we continue, can I quickly get some more information about you to understand you and your preferences better?'
+  - text: '{name}, Before you go,  would you like to greate a TravelQ profile  which will help me understand you and your preferences better?'
   utter_yes:
-  - text: great, thank you for your understanding.
+  - text: Great. lets begin creating a TravelQ profile for you {name}
   utter_no:
   - text: thats fine, not a problem
 actions: []

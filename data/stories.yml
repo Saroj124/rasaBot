@@ -47,17 +47,6 @@ stories:
   - slot_was_set:
     - name: saroj
   - action: utter_giveuserName
-- story: Story from Conversation ID d7e80af43d674cc7a77e793a2f06299f
-  steps:
-  - intent: greet
-  - action: utter_greet
-  - intent: userName
-    entities:
-    - name: saroj
-  - slot_was_set:
-    - name: saroj
-  - action: utter_giveuserName
-  - intent: travelUK
 - story: Story from Conversation ID 096d50a5602a4d9ea723157969828e48
   steps:
   - intent: greet
@@ -150,4 +139,73 @@ stories:
   - action: utter_did_that_help
   - intent: affirm
   - action: utter_helpYes
+  - action: utter_goodbye
+- story: Story from Conversation ID 70cb2a612028446096846c460205b47a
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: userName
+    entities:
+    - name: Rayan
+  - slot_was_set:
+    - name: Rayan
+  - action: utter_giveuserName
+  - intent: travelUK
+  - action: utter_travelUK
+  - intent: uklocalrules
+  - action: utter_ukrulesandRegulations
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_helpYes
+  - action: utter_askfordetails
+  - intent: affirm
+  - action: utter_yes
+  - action: utter_usergender
+  - intent: usergender
+  - action: utter_userage
+  - intent: userage
+    entities:
+    - age: 19 years
+  - action: utter_occupattion
+  - intent: useroccupation
+  - action: utter_budget
+  - intent: userbudget
+  - action: utter_goodbye
+- story: Story from Conversation ID 5c60335919a145f5b0ac23bd189b3e6a
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: userName
+    entities:
+    - name: Harry
+  - slot_was_set:
+    - name: Harry
+  - action: utter_giveuserName
+  - intent: travelUK
+  - action: utter_travelUK
+  - intent: uklocalrules
+  - action: utter_ukrulesandRegulations
+  - slot_was_set:
+    - name: Harry
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_helpYes
+  - action: utter_askfordetails
+  - intent: affirm
+  - action: utter_yes
+  - action: utter_usergender
+  - intent: usergender
+  - action: utter_userage
+  - intent: userage
+    entities:
+    - age: '20'
+  - action: utter_occupattion
+  - intent: useroccupation
+    entities:
+    - occupation: Pilot
+  - slot_was_set:
+    - occupation: Pilot
+  - action: utter_budget
+  - intent: userbudget
+  - action: utter_yes
   - action: utter_goodbye

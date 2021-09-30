@@ -141,6 +141,13 @@ nlu:
     - My name is [Charlie](name)
     - my name is Jumbo
     - my name is [Saroj](name)
+    - my name is deven
+    - my name is Prince
+    - my name is Ryan
+    - my name is [Rayan](name)
+    - my name is [Adi](name)
+    - my name is [Patrick](name)
+    - my name is [Harry](name)
 - intent: uklocalrules
   examples: |
     - Local Rules and Regulation
@@ -171,6 +178,8 @@ nlu:
     - [18](age)
     - [25 years](age)
     - [18 years](age)
+    - [19 years](age)
+    - [20](age)
 - intent: useroccupation
   examples: |
     - user occupation
@@ -182,6 +191,9 @@ nlu:
     - [Doctor](occupation)
     - [Student](occupation)
     - [Singer](occupation)
+    - I am an Engineer
+    - I am a software deveeloper
+    - I am a [Pilot](occupation)
 - intent: usergender
   examples: |
     - user gender
@@ -191,3 +203,4 @@ nlu:
   examples: |
     - £1500-£2000
     - £500-£1000
+    - £2500-£3000
