@@ -53,6 +53,7 @@ entities:
 - age
 - budget
 - gender
+- userbudget
 slots:
   occupation:
     type: rasa.shared.core.slots.TextSlot
@@ -70,7 +71,7 @@ responses:
   utter_cheer_up:
   - image: https://i.imgur.com/nGF1K8f.jpg
     text: 'Here is something to cheer you up:'
-  utter_did_that_help:
+  utter_wasthatHelpful:
   - buttons:
     - payload: Yes, Indeed
       title: 'Yes, Indeed '
@@ -150,7 +151,7 @@ responses:
   - text: Some public toilets have been closed while some lockdown restrictions remain, so visitors should check what facilities are open before planning to travel somewhere for the day. Information on public toilets in Great Britain and Northern Ireland can be found at Lockdown Loo.
   utter_travelmethod:
   - text: There are many ways you can travel around Uk. You can choose to travel by Bus, Ferry, Train, Taxi, airplane or even drive if you have a valid UK driving Liscense
-  utter_helpYes:
+  utter_helped:
   - text: I hope that was helpful {name} , Always here to help .
   utter_needmoreInformation:
   - text: Please visit the UK governments website for the latest update on travelling to the UK during Covid 19. https://www.gov.uk/browse/visas-immigration/arriving-in-the-uk
@@ -185,7 +186,8 @@ responses:
   utter_thankyou:
   - text: Thank you providing your details.
   utter_finalthanks:
-  - text: Thank you for providing your user details. Your travelQ profile has been created successfully. I hope to see you soon
-actions: []
+  - text: Dear {name} your TravelQ profile has been successfully created. Thank you for your help
+actions:
+- utter_finalthanks
 forms: {}
 e2e_actions: []

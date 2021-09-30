@@ -30,6 +30,7 @@ nlu:
     - see you around
     - bye bye
     - see you later
+    - thanks goodbye
 - intent: affirm
   examples: |
     - yes
@@ -40,9 +41,10 @@ nlu:
     - correct
     - ok
     - ok yes
-    - Yes, Indeed
     - yes thats fine
     - sure
+    - Yes, Indeed
+    - ok sure
 - intent: deny
   examples: |
     - no
@@ -127,7 +129,7 @@ nlu:
     - my name is Manish
     - [Ted](name)
     - ted
-    - my name is Aditya
+    - my name is [Aditya](name)
     - Ramesh
     - my name is Elon
     - my name is [Hari](name)
@@ -153,6 +155,11 @@ nlu:
     - name is [saroj](name)
     - [ryan](name)
     - my name is [adhar](name)
+    - my name is [Dhiren](name)
+    - [freedie](name)
+    - My name is [Terry](name)
+    - yes, My name is [Terry](name)
+    - my name is [Terry](name)
 - intent: uklocalrules
   examples: |
     - Local Rules and Regulation
@@ -188,6 +195,11 @@ nlu:
     - [25 years](age) old
     - [19](age)
     - [25](age)
+    - [I am 19 years old](age)
+    - [21 years](age)
+    - [22](age)
+    - [my age is 21](age)
+    - [26 years](age)
 - intent: useroccupation
   examples: |
     - user occupation
@@ -206,6 +218,13 @@ nlu:
     - [engineer](occupation)
     - [software engineer](occupation)
     - [teacher](occupation)
+    - I am a [singer](occupation)
+    - [dancer](occupation)
+    - [I play guitar](occupation)
+    - [Finance](occupation)
+    - [Doctor](occupation)
+    - nurse
+    - i am a [teacher](occupation)
 - intent: usergender
   examples: |
     - user gender
@@ -213,8 +232,10 @@ nlu:
     - [Female](gender)
     - [male](gender)
     - [female](gender)
+    - Female
 - intent: userbudget
   examples: |
     - £1500-£2000
     - £500-£1000
     - [£2500-£3000](budget)
+    - [£4000+](budget)

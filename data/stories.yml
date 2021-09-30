@@ -1,29 +1,5 @@
 version: "2.0"
 stories:
-- story: happy path
-  steps:
-  - intent: greet
-  - action: utter_greet
-  - intent: mood_great
-  - action: utter_happy
-- story: sad path 1
-  steps:
-  - intent: greet
-  - action: utter_greet
-  - intent: mood_unhappy
-  - action: utter_cheer_up
-  - action: utter_did_that_help
-  - intent: affirm
-  - action: utter_happy
-- story: sad path 2
-  steps:
-  - intent: greet
-  - action: utter_greet
-  - intent: mood_unhappy
-  - action: utter_cheer_up
-  - action: utter_did_that_help
-  - intent: deny
-  - action: utter_goodbye
 - story: Story from Conversation ID 7785c4aaeec9454d9323819c94c4b682
   steps:
   - intent: greet
@@ -305,4 +281,56 @@ stories:
   - action: utter_budget
   - intent: userbudget
   - action: utter_finalthanks
+  - action: utter_goodbye
+- story: Story from Conversation ID cd2714db53b8478981152dd840ae7a76
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: userName
+    entities:
+    - name: saroj
+  - slot_was_set:
+    - name: saroj
+  - action: utter_giveuserName
+  - intent: travelUK
+  - action: utter_askfordetails
+- story: Story from Conversation ID 26066c69bc554993a829253ba8d93f8c
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: userName
+    entities:
+    - name: Terry
+  - slot_was_set:
+    - name: Terry
+  - action: utter_giveuserName
+  - intent: travelUK
+  - action: utter_travelUK
+  - intent: uklocalrules
+  - action: utter_ukrulesandRegulations
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_helpYes
+  - action: utter_askfordetails
+  - intent: affirm
+  - action: utter_yes
+  - action: utter_usergender
+  - intent: usergender
+  - action: utter_userage
+  - intent: userage
+    entities:
+    - age: 26 years
+  - action: utter_occupattion
+  - intent: useroccupation
+    entities:
+    - occupation: teacher
+  - slot_was_set:
+    - occupation: teacher
+  - action: utter_budget
+  - intent: userbudget
+    entities:
+    - userbudget: £1000-£1500
+  - action: utter_thankyou
+  - action: utter_finalthanks
+  - intent: goodbye
   - action: utter_goodbye
