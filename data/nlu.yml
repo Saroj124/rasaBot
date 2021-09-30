@@ -15,6 +15,7 @@ nlu:
     - goodmorning
     - goodevening
     - good afternoon
+    - Hi
 - intent: goodbye
   examples: |
     - good afternoon
@@ -86,6 +87,28 @@ nlu:
 - intent: travelUK
   examples: |
     - travelUK
+    - TravelUK
 - intent: TravelEU
   examples: |
     - TravelEU
+- intent: userName
+  examples: |
+    - my name is [Dhiraj](name)
+    - I am [saroj](name)
+    - my name is [dhiraj](name)
+    - my name is dinesh
+    - my name is dibesh
+    - my name is  [saroj](name)
+    - [saroj](name)
+    - my name is [saroj](name)
+    - my name is peter
+    - My name is [Peter](name)
+    - I am [Peter](name)
+    - [Peter](name)
+    - the name is [paul](name)
+    - my first name is [George](name)
+    - [George](name)
+    - my name is [Alex](name)
+    - My first name is [Alexander](name)
+    - I am [Harry](name)
+    - Harry

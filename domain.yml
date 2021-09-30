@@ -19,16 +19,28 @@ intents:
     use_entities: true
 - bot_challenge:
     use_entities: true
-entities: []
-slots: {}
+- travelUK:
+    use_entities: true
+- TravelEU:
+    use_entities: true
+- userName:
+    use_entities: true
+entities:
+- name
+slots:
+  username:
+    type: rasa.shared.core.slots.TextSlot
+    initial_value: null
+    auto_fill: true
+    influence_conversation: true
+  name:
+    type: rasa.shared.core.slots.UnfeaturizedSlot
+    initial_value: null
+    auto_fill: true
+    influence_conversation: false
 responses:
   utter_greet:
-  - buttons:
-    - payload: travelUK
-      title: Travelling to UK during COVID-19
-    - payload: travelEU
-      title: Travelling to EU during COVID-19
-    text: Hello there! My name is TravelQ chatbot🚀 . I can help you with your travel in the UK and EU during COVID-19.
+  - text: Hello there! My name is TravelQ chatbot🚀 . Can I have your first name please?
   utter_cheer_up:
   - image: https://i.imgur.com/nGF1K8f.jpg
     text: 'Here is something to cheer you up:'
@@ -40,6 +52,37 @@ responses:
   - text: Bye
   utter_iamabot:
   - text: I am a bot, powered by Rasa.
+  utter_giveuserName:
+  - buttons:
+    - payload: TravelUK
+      title: Travelling to UK during COVID-19
+    - payload: TravelEU
+      title: Travelling to UK during COVID-19
+    text: 'Hello there {name}.  I am  here to assist you with your visit to the UK and EU during Covid 19 and know you better.  I can help you with:'
+  utter_travelUK:
+  - buttons:
+    - payload: Local Rules and Regulation
+      title: Local Rules and Regulations
+    - payload: Transfers and transportation
+      title: Transfers and transportation
+    - payload: Accomodation
+      title: Accomodation
+    - payload: Attractions
+      title: Attractions
+    - payload: General Queries
+      title: General Queries
+    text: 'Hi {name}.  If you wish to travel to the United Kingdom (UK), there are number of testing and qurantine rules which you need to follow and depends on where you have been in last 10 days.  For the rules and regulations related to the UK countries like England, Wales, Scotland and Northern Ireland please visit the UK governments webiste on : https://www.gov.uk/uk-border-control.  I can also assist you with the following:'
+  utter_travelEU:
+  - buttons:
+    - payload: travel restriction
+      title: Travel restrictions
+    - payload: EU digital Covid Certificate
+      title: EU digital Covid Certificate
+    - payload: Precautions
+      title: Precautions
+    - payload: Travel Measures
+      title: Travel Measures
+    text: 'Hi {name}. If you wish to travel to the EU zone during covid 19, there are number of rules and regulations.  Would you like to know more about:'
 actions: []
 forms: {}
 e2e_actions: []

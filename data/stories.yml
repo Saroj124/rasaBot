@@ -29,3 +29,32 @@ stories:
   - intent: greet
   - action: utter_greet
   - intent: travelUK
+- story: Story from Conversation ID c920f78168a74c27aca50eb203112b33
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: userName
+    entities:
+    - name: dhiraj
+  - action: utter_giveuserName
+- story: Story from Conversation ID fe90f16646ef4d0991525c4c29ae9bdc
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: userName
+    entities:
+    - name: saroj
+  - slot_was_set:
+    - name: saroj
+  - action: utter_giveuserName
+- story: Story from Conversation ID d7e80af43d674cc7a77e793a2f06299f
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: userName
+    entities:
+    - name: saroj
+  - slot_was_set:
+    - name: saroj
+  - action: utter_giveuserName
+  - intent: travelUK
