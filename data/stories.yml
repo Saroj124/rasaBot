@@ -209,3 +209,100 @@ stories:
   - intent: userbudget
   - action: utter_yes
   - action: utter_goodbye
+- story: Story from Conversation ID a9901e625a1a4160b0546486a012f672
+  steps:
+  - slot_was_set:
+    - name: peter
+  - action: utter_yes
+  - action: utter_usergender
+  - intent: usergender
+    entities:
+    - gender: Male
+  - action: utter_budget
+  - intent: userbudget
+  - action: utter_userage
+  - intent: userage
+    entities:
+    - age: 25 years
+  - action: utter_thankyou
+  - action: utter_occupattion
+  - intent: useroccupation
+  - action: utter_thankyou
+  - action: utter_goodbye
+- story: Story from Conversation ID 2fc58443f4a34e4ebe3b9f651ae6fa0b
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: userName
+    entities:
+    - name: ryan
+  - slot_was_set:
+    - name: ryan
+  - action: utter_giveuserName
+  - intent: travelUK
+  - action: utter_travelUK
+  - intent: uklocalrules
+  - action: utter_ukrulesandRegulations
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_helpYes
+  - action: utter_askfordetails
+  - intent: affirm
+  - action: utter_yes
+  - action: utter_usergender
+  - intent: usergender
+    entities:
+    - gender: Male
+  - action: utter_thankyou
+  - action: utter_userage
+  - intent: userage
+    entities:
+    - age: 25 years
+  - action: utter_thankyou
+  - action: utter_occupattion
+  - intent: useroccupation
+  - action: utter_budget
+  - intent: userbudget
+  - action: utter_finalthanks
+  - action: utter_goodbye
+- story: Story from Conversation ID 9a130ddbc1aa4c93a808e0cea7aa0bf2
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: userName
+    entities:
+    - name: peter
+  - slot_was_set:
+    - name: peter
+  - action: utter_giveuserName
+  - intent: travelUK
+  - action: utter_travelUK
+  - intent: uklocalrules
+  - action: utter_ukrulesandRegulations
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_helpYes
+  - action: utter_helpYes
+  - action: utter_askfordetails
+  - intent: affirm
+  - action: utter_yes
+  - action: utter_usergender
+  - intent: usergender
+    entities:
+    - gender: Male
+  - action: utter_thankyou
+  - action: utter_userage
+  - intent: userage
+    entities:
+    - age: '25'
+  - action: utter_thankyou
+  - action: utter_occupattion
+  - intent: useroccupation
+    entities:
+    - occupation: teacher
+  - slot_was_set:
+    - occupation: teacher
+  - action: utter_budget
+  - intent: userbudget
+  - action: utter_finalthanks
+  - action: utter_goodbye

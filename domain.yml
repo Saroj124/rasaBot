@@ -51,6 +51,8 @@ entities:
 - name
 - occupation
 - age
+- budget
+- gender
 slots:
   occupation:
     type: rasa.shared.core.slots.TextSlot
@@ -149,7 +151,7 @@ responses:
   utter_travelmethod:
   - text: There are many ways you can travel around Uk. You can choose to travel by Bus, Ferry, Train, Taxi, airplane or even drive if you have a valid UK driving Liscense
   utter_helpYes:
-  - text: I hope that was helpful {name} , Have a great day
+  - text: I hope that was helpful {name} , Always here to help .
   utter_needmoreInformation:
   - text: Please visit the UK governments website for the latest update on travelling to the UK during Covid 19. https://www.gov.uk/browse/visas-immigration/arriving-in-the-uk
   utter_userage:
@@ -175,11 +177,15 @@ responses:
       title: £4000+
     text: Whilst you are in the Uk, how much amount of money do you wish to spend ? (in £)
   utter_askfordetails:
-  - text: '{name}, Before you go,  would you like to greate a TravelQ profile  which will help me understand you and your preferences better?'
+  - text: '{name}, Before you go,  would you like to create a TravelQ profile  which will help me understand you and your preferences better in the future?'
   utter_yes:
   - text: Great. lets begin creating a TravelQ profile for you {name}
   utter_no:
   - text: thats fine, not a problem
+  utter_thankyou:
+  - text: Thank you providing your details.
+  utter_finalthanks:
+  - text: Thank you for providing your user details. Your travelQ profile has been created successfully. I hope to see you soon
 actions: []
 forms: {}
 e2e_actions: []

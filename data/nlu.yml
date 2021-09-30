@@ -41,6 +41,8 @@ nlu:
     - ok
     - ok yes
     - Yes, Indeed
+    - yes thats fine
+    - sure
 - intent: deny
   examples: |
     - no
@@ -142,12 +144,15 @@ nlu:
     - my name is Jumbo
     - my name is [Saroj](name)
     - my name is deven
-    - my name is Prince
-    - my name is Ryan
+    - my name is [Prince](name)
+    - my name is [Ryan](name)
     - my name is [Rayan](name)
     - my name is [Adi](name)
     - my name is [Patrick](name)
     - my name is [Harry](name)
+    - name is [saroj](name)
+    - [ryan](name)
+    - my name is [adhar](name)
 - intent: uklocalrules
   examples: |
     - Local Rules and Regulation
@@ -180,6 +185,9 @@ nlu:
     - [18 years](age)
     - [19 years](age)
     - [20](age)
+    - [25 years](age) old
+    - [19](age)
+    - [25](age)
 - intent: useroccupation
   examples: |
     - user occupation
@@ -191,16 +199,22 @@ nlu:
     - [Doctor](occupation)
     - [Student](occupation)
     - [Singer](occupation)
-    - I am an Engineer
-    - I am a software deveeloper
+    - I am an [Engineer](occupation)
+    - I am a[ software deveeloper](occupation)
     - I am a [Pilot](occupation)
+    - [Entrepreneur](occupation)
+    - [engineer](occupation)
+    - [software engineer](occupation)
+    - [teacher](occupation)
 - intent: usergender
   examples: |
     - user gender
-    - Male
-    - Female
+    - [Male](gender)
+    - [Female](gender)
+    - [male](gender)
+    - [female](gender)
 - intent: userbudget
   examples: |
     - £1500-£2000
     - £500-£1000
-    - £2500-£3000
+    - [£2500-£3000](budget)
