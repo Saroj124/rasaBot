@@ -16,6 +16,7 @@ nlu:
     - goodevening
     - good afternoon
     - Hi
+    - Hello
 - intent: goodbye
   examples: |
     - good afternoon
@@ -37,6 +38,7 @@ nlu:
     - of course
     - that sounds good
     - correct
+    - ok
 - intent: deny
   examples: |
     - no
@@ -46,6 +48,7 @@ nlu:
     - don't like that
     - no way
     - not really
+    - No, I want more information
 - intent: mood_great
   examples: |
     - perfect
@@ -117,6 +120,21 @@ nlu:
     - [alex](name)
     - [yubraj](name)
     - [peter](name)
+    - my name is Manish
+    - [Ted](name)
+    - ted
+    - my name is Aditya
+    - Ramesh
+    - my name is Elon
+    - my name is [Hari](name)
+    - my name is [Yubraj](name)
+    - yes my name is [alex](name)
+    - my name is [Peter](name)
+    - Freedy
+    - my name is [Patel](name)
+    - my name is Natalia
+    - [george](name)
+    - my name is Ram
 - intent: uklocalrules
   examples: |
     - Local Rules and Regulation
@@ -135,3 +153,25 @@ nlu:
 - intent: general queries
   examples: |
     - general queries
+- intent: askforDetails
+  examples: |
+    - ask for details
+- intent: userage
+  examples: |
+    - user age
+- intent: useroccupation
+  examples: |
+    - user occupation
+    - i am a [lawyer](occupation)
+    - [teacher](occupation)
+    - I am a [software developer ](occupation)
+    - I am a [data scientist ](occupation)
+    - [Pilot](occupation)
+    - [Doctor](occupation)
+    - [Student](occupation)
+    - [Singer](occupation)
+- intent: usergender
+  examples: |
+    - user gender
+    - Male
+    - Female

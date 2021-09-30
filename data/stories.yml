@@ -97,3 +97,10 @@ stories:
   - action: utter_travelUK
   - intent: uklocalrules
   - action: utter_ukrulesandRegulations
+- story: Story from Conversation ID 44d62f66ad75447c87281c6b1b724de7
+  steps:
+  - slot_was_set:
+    - name: Patel
+  - intent: affirm
+  - action: utter_yes
+  - action: utter_usergender

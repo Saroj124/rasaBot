@@ -25,10 +25,31 @@ intents:
     use_entities: true
 - userName:
     use_entities: true
+- uklocalrules:
+    use_entities: true
+- ukRulesandregulations:
+    use_entities: true
+- transport and transfers:
+    use_entities: true
+- accomodation:
+    use_entities: true
+- attractions:
+    use_entities: true
+- general queries:
+    use_entities: true
+- askforDetails:
+    use_entities: true
+- userage:
+    use_entities: true
+- useroccupation:
+    use_entities: true
+- usergender:
+    use_entities: true
 entities:
 - name
+- occupation
 slots:
-  username:
+  occupation:
     type: rasa.shared.core.slots.TextSlot
     initial_value: null
     auto_fill: true
@@ -45,7 +66,12 @@ responses:
   - image: https://i.imgur.com/nGF1K8f.jpg
     text: 'Here is something to cheer you up:'
   utter_did_that_help:
-  - text: Did that help you?
+  - buttons:
+    - payload: Yes, Indeed
+      title: 'Yes, Indeed '
+    - payload: No, I want more information
+      title: No, I want more Information
+    text: Did that help you?
   utter_happy:
   - text: Great, carry on!
   utter_goodbye:
@@ -122,6 +148,38 @@ responses:
   - text: Some public toilets have been closed while some lockdown restrictions remain, so visitors should check what facilities are open before planning to travel somewhere for the day. Information on public toilets in Great Britain and Northern Ireland can be found at Lockdown Loo.
   utter_travelmethod:
   - text: There are many ways you can travel around Uk. You can choose to travel by Bus, Ferry, Train, Taxi, airplane or even drive if you have a valid UK driving Liscense
+  utter_helpYes:
+  - text: I hope that was helpful {name} , Have a great day
+  utter_needmoreInformation:
+  - text: Please visit the UK governments website for the latest update on travelling to the UK during Covid 19. https://www.gov.uk/browse/visas-immigration/arriving-in-the-uk
+  utter_userage:
+  - text: '{name} can you please enter your age?'
+  utter_usergender:
+  - buttons:
+    - payload: Male
+      title: 'Male '
+    - payload: Female
+      title: Female
+    text: Can you please select one of the following gender
+  utter_occupattion:
+  - text: '{name} can I please ask what you do for living (occupation) ?'
+  utter_budget:
+  - buttons:
+    - payload: £500-£1000
+      title: £500-£1000
+    - payload: £1500-£2000
+      title: £1500-£2000
+    - payload: £2500-£3000
+      title: £2500-£3000
+    - payload: £4000+
+      title: £4000+
+    text: Whilst you are in the Uk, how much amount of money do you wish to spend ? (in £)
+  utter_askfordetails:
+  - text: '{name}, Before we continue, can I quickly get some more information about you to understand you and your preferences better?'
+  utter_yes:
+  - text: great, thank you for your understanding.
+  utter_no:
+  - text: thats fine, not a problem
 actions: []
 forms: {}
 e2e_actions: []
