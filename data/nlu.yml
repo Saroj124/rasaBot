@@ -39,6 +39,8 @@ nlu:
     - that sounds good
     - correct
     - ok
+    - ok yes
+    - Yes, Indeed
 - intent: deny
   examples: |
     - no
@@ -130,11 +132,15 @@ nlu:
     - my name is [Yubraj](name)
     - yes my name is [alex](name)
     - my name is [Peter](name)
-    - Freedy
+    - [Freedy](name)
     - my name is [Patel](name)
-    - my name is Natalia
+    - my name is [Natalia](name)
     - [george](name)
-    - my name is Ram
+    - my name is [Ram](name)
+    - my name is Milan
+    - My name is [Charlie](name)
+    - my name is Jumbo
+    - my name is [Saroj](name)
 - intent: uklocalrules
   examples: |
     - Local Rules and Regulation
@@ -159,6 +165,12 @@ nlu:
 - intent: userage
   examples: |
     - user age
+    - [10](age)
+    - [15](age)
+    - [22 years](age)
+    - [18](age)
+    - [25 years](age)
+    - [18 years](age)
 - intent: useroccupation
   examples: |
     - user occupation
@@ -175,3 +187,7 @@ nlu:
     - user gender
     - Male
     - Female
+- intent: userbudget
+  examples: |
+    - £1500-£2000
+    - £500-£1000

@@ -104,3 +104,50 @@ stories:
   - intent: affirm
   - action: utter_yes
   - action: utter_usergender
+- story: Story from Conversation ID fc2a10195fd94f0a9eaee5779bfd1723
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: userName
+    entities:
+    - name: Charlie
+  - slot_was_set:
+    - name: Charlie
+  - action: utter_giveuserName
+  - intent: travelUK
+  - action: utter_askfordetails
+  - intent: affirm
+  - action: utter_yes
+  - action: utter_usergender
+  - intent: usergender
+  - action: utter_budget
+  - intent: userbudget
+- story: Story from Conversation ID cfa9f2423c7d4463a02de413074c314e
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: userName
+    entities:
+    - name: Saroj
+  - slot_was_set:
+    - name: Saroj
+  - action: utter_giveuserName
+  - intent: travelUK
+  - action: utter_askfordetails
+  - intent: affirm
+  - action: utter_yes
+  - action: utter_usergender
+  - intent: usergender
+  - action: utter_budget
+  - intent: userbudget
+  - action: utter_userage
+  - intent: userage
+    entities:
+    - age: 18 years
+  - action: utter_travelUK
+  - intent: uklocalrules
+  - action: utter_ukrulesandRegulations
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_helpYes
+  - action: utter_goodbye
