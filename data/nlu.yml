@@ -160,6 +160,8 @@ nlu:
     - My name is [Terry](name)
     - yes, My name is [Terry](name)
     - my name is [Terry](name)
+    - my name is [heman](name)
+    - my name is [Nikhil](name)
 - intent: uklocalrules
   examples: |
     - Local Rules and Regulation
